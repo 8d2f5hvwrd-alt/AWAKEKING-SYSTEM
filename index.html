@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AWAKENING">
+<link rel="manifest" href="manifest.json">
+<title>AWAKENING | Sistema</title>
+<style>
+:root{--bg:#070b13;--panel:#0d1523;--panel2:#111e30;--line:#20334b;--blue:#63c6ff;--blue2:#288fe0;--text:#edf6ff;--muted:#8ea5bf;--green:#65e6b0;--red:#ff6f86}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#153050 0%,var(--bg) 52%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;padding:env(safe-area-inset-top) 14px calc(90px + env(safe-area-inset-bottom));}
+button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:560px;margin:0 auto}.top{display:flex;justify-content:space-between;align-items:center;padding:17px 2px 13px}.brand{font-size:12px;letter-spacing:3px;color:var(--blue);font-weight:800}.sys{font-size:10px;color:var(--green);border:1px solid #245c52;padding:6px 9px;border-radius:4px;letter-spacing:1px}.hero{border:1px solid #294666;background:linear-gradient(135deg,#11243aee,#0b111eee);padding:20px;border-radius:13px;box-shadow:0 0 35px #1266a31b;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:160px;height:160px;border:1px solid #2d7fb344;border-radius:50%;right:-65px;top:-70px;box-shadow:0 0 0 18px #2d7fb311,0 0 0 38px #2d7fb30a;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--blue);font-weight:700}.player{font-size:27px;font-weight:850;letter-spacing:1px;margin:8px 0 4px}.sub{color:var(--muted);font-size:12px}.levelrow{display:flex;justify-content:space-between;align-items:end;margin-top:22px;font-size:12px}.levelrow strong{font-size:16px}.bar{height:7px;background:#1a2b40;border-radius:9px;margin-top:9px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#287de1,#73d8ff);width:0%;transition:width .35s}.tiny{font-size:10px;color:var(--muted);margin-top:7px}.section{margin-top:22px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}.sectionhead h2{font-size:14px;letter-spacing:1px;margin:0}.sectionhead span{font-size:10px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat,.card{background:linear-gradient(145deg,#0e1929,#0a111d);border:1px solid var(--line);border-radius:10px;padding:13px}.statname{font-size:10px;letter-spacing:1px;color:var(--blue);font-weight:750}.statnum{font-size:22px;font-weight:800;margin:7px 0 3px}.statdesc{font-size:10px;color:var(--muted);line-height:1.4}.mission{border:1px solid #2b5278;background:linear-gradient(135deg,#10243a,#0c1522);border-radius:12px;padding:15px;margin-bottom:10px}.mrow{display:flex;justify-content:space-between;gap:10px;align-items:start}.tag{font-size:9px;letter-spacing:1px;color:var(--blue);border:1px solid #2e5f87;padding:5px 7px;border-radius:4px;white-space:nowrap}.mission h3{font-size:16px;margin:9px 0 6px}.mission p{font-size:12px;color:#b0c4da;line-height:1.5;margin:0 0 12px}.meta{font-size:10px;color:var(--muted);display:flex;gap:12px;margin-bottom:13px}.btn{border:0;border-radius:7px;background:linear-gradient(90deg,#237dd0,#43b5ee);color:#03101b;font-weight:800;padding:12px 14px;width:100%;font-size:12px;letter-spacing:.3px}.btn.secondary{background:#122338;color:#cce9ff;border:1px solid #2c4d6b}.btn:disabled{opacity:.4;cursor:default}.twobtn{display:grid;grid-template-columns:1fr 1fr;gap:9px}.empty{padding:22px;text-align:center;border:1px dashed #29415c;border-radius:10px;color:var(--muted);font-size:12px;line-height:1.6}.nav{position:fixed;bottom:0;left:0;right:0;background:#080d18f2;backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:9px 12px calc(9px + env(safe-area-inset-bottom));display:flex;justify-content:center;z-index:4}.navin{display:flex;width:100%;max-width:560px;justify-content:space-around}.nav button{background:none;border:0;color:var(--muted);font-size:10px;padding:6px 12px}.nav button b{display:block;font-size:17px;margin-bottom:3px;font-weight:500}.nav button.active{color:var(--blue)}.screen{display:none}.screen.active{display:block}.notice{font-size:12px;color:#b5dfff;border-left:2px solid var(--blue);padding:10px 12px;background:#1022397a;line-height:1.5;margin-top:13px}.field{margin:12px 0}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:6px}.field input,.field select{width:100%;background:#080f1a;border:1px solid var(--line);border-radius:7px;padding:12px;color:var(--text)}.logitem{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.logitem small{display:block;color:var(--muted);margin-top:4px}.xp{color:var(--green);font-weight:800;white-space:nowrap}.footer{font-size:10px;color:#667f9b;text-align:center;margin-top:25px;line-height:1.5}.toast{position:fixed;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#142e45;border:1px solid #4c9bd0;color:#e6f7ff;padding:12px 16px;border-radius:8px;font-size:12px;z-index:10;display:none;width:max-content;max-width:90%}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div><div class="brand">AWAKENING SYSTEM</div><div class="sub" style="margin-top:5px">PROTOCOLO DE EVOLUÇÃO PESSOAL</div></div><div class="sys">● ONLINE</div></header>
+<div class="screen active" id="screen-home">
+<section class="hero"><div class="eyebrow">STATUS DO JOGADOR</div><div class="player" id="playerName">JOGADOR 001</div><div class="sub" id="rank">Nível 1 · Classe não definida</div><div class="levelrow"><span>EXPERIÊNCIA</span><strong id="xpText">0 / 100 EXP</strong></div><div class="bar"><div class="fill" id="xpFill"></div></div><div class="tiny" id="streak">Primeiro dia da sua jornada.</div></section>
+<section class="section"><div class="sectionhead"><h2>ATRIBUTOS</h2><span>EVOLUÇÃO COMPROVADA</span></div><div class="grid" id="stats"></div></section>
+<section class="section"><div class="sectionhead"><h2>MISSÕES DE HOJE</h2><span id="missionCount">0 concluídas</span></div><div id="missions"></div><div class="twobtn"><button class="btn secondary" id="refreshBtn">↻ NOVAS MISSÕES</button><button class="btn" id="checkinBtn">CHECK-IN DO DIA</button></div></section>
+<div class="notice" id="systemMessage">[SISTEMA] Sua jornada começa com uma única ação. Complete missões pequenas. A consistência desbloqueia o próximo nível.</div>
+</div>
+<div class="screen" id="screen-history"><section class="section"><div class="sectionhead"><h2>REGISTRO DE CONQUISTAS</h2><span>HISTÓRICO</span></div><div class="card" id="history"></div></section></div>
+<div class="screen" id="screen-profile"><section class="section"><div class="sectionhead"><h2>CONFIGURAÇÃO DO JOGADOR</h2><span>PROTOCOLO</span></div><div class="card"><div class="field"><label>Nome de jogador</label><input id="nameInput" maxlength="24" placeholder="Ex.: JOGADOR 001"></div><div class="field"><label>Tempo diário disponível</label><select id="timeInput"><option value="15">15 minutos</option><option value="20">20 minutos</option><option value="30" selected>30 minutos</option></select></div><div class="field"><label>Foco inicial</label><select id="focusInput"><option value="integral">Evolução integral</option><option value="fisico">Corpo e saúde</option><option value="mente">Mente e aprendizado</option><option value="autonomia">Autonomia e vida prática</option></select></div><button class="btn" id="saveProfile">SALVAR CONFIGURAÇÃO</button><div class="notice">Esta versão salva os dados neste navegador. Ainda não há conta, sincronização entre dispositivos nem conexão com um modelo de IA.</div></div><section class="section"><button class="btn secondary" id="exportBtn">EXPORTAR MEU PROGRESSO</button><div style="height:9px"></div><button class="btn secondary" id="resetBtn">REINICIAR SISTEMA</button></section></section></div>
+<div class="footer">VERSÃO 0.1 · PROTÓTIPO FUNCIONAL<br>Seu progresso é salvo localmente neste dispositivo.</div>
+</div>
+<div class="nav"><div class="navin"><button class="active" data-screen="home"><b>⌂</b>STATUS</button><button data-screen="history"><b>▤</b>REGISTRO</button><button data-screen="profile"><b>⚙</b>JOGADOR</button></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const KEY='awakening_v01_state';
+const defaultState=()=>({name:'JOGADOR 001',level:1,xp:0,totalXp:0,completed:[],history:[],day:'',dayDone:0,streak:0,lastCheckin:'',minutes:30,focus:'integral',difficulty:1,stats:{forca:0,vitalidade:0,agilidade:0,inteligencia:0,disciplina:0,autonomia:0},missions:[]});
+let state;
+try{state=JSON.parse(localStorage.getItem(KEY))||defaultState()}catch(e){state=defaultState()}
+const catalog=[
+{id:'move',title:'Ativar o corpo',desc:'Faça 8 a 12 minutos de movimento: caminhada, mobilidade ou exercícios leves adequados ao seu nível.',stat:'vitalidade',xp:20,min:10,cat:'VITALIDADE'},
+{id:'learn',title:'Expandir conhecimento',desc:'Estude algo que deseja aprender por 10 minutos. Ao terminar, escreva uma ideia que compreendeu.',stat:'inteligencia',xp:20,min:10,cat:'INTELIGÊNCIA'},
+{id:'order',title:'Organizar o campo',desc:'Organize um pequeno espaço ou resolva uma pendência prática que esteja ocupando sua cabeça.',stat:'autonomia',xp:15,min:8,cat:'AUTONOMIA'},
+{id:'focus',title:'Treinar a disciplina',desc:'Escolha uma tarefa importante e trabalhe nela por 10 minutos sem alternar para distrações.',stat:'disciplina',xp:20,min:10,cat:'DISCIPLINA'},
+{id:'walk',title:'Missão de mobilidade',desc:'Faça uma caminhada curta ou uma sequência suave de mobilidade, respeitando seus limites.',stat:'agilidade',xp:15,min:8,cat:'AGILIDADE'},
+{id:'strength',title:'Desafio de força',desc:'Faça 2 a 3 séries confortáveis de sentar e levantar de uma cadeira ou flexões na parede. Pare se sentir dor.',stat:'forca',xp:20,min:8,cat:'FORÇA'},
+{id:'reflect',title:'Analisar a jornada',desc:'Registre em duas frases o que funcionou hoje e qual será seu próximo passo concreto.',stat:'inteligencia',xp:15,min:5,cat:'INTELIGÊNCIA'},
+{id:'care',title:'Recuperação estratégica',desc:'Reserve alguns minutos para água, uma pausa sem tela e perceber como está sua energia.',stat:'vitalidade',xp:15,min:5,cat:'VITALIDADE'},
+{id:'money',title:'Auditoria de recursos',desc:'Confira uma despesa ou anote uma ação pequena para melhorar sua organização financeira.',stat:'autonomia',xp:20,min:10,cat:'AUTONOMIA'},
+{id:'connect',title:'Fortalecer vínculo',desc:'Dedique atenção genuína a alguém importante ou faça algo concreto para cuidar de uma relação.',stat:'autonomia',xp:15,min:5,cat:'AUTONOMIA'}
+];
+const $=id=>document.getElementById(id);
+function today(){return new Date().toLocaleDateString('sv-SE')}
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function levelFromXp(xp){let lvl=1,remain=xp;while(remain>=lvl*100){remain-=lvl*100;lvl++}return {lvl,remain,need:lvl*100}}
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2300)}
+function ensureDay(){const d=today();if(state.day!==d){state.day=d;state.completed=[];state.missions=[];generateMissions();save()}}
+function generateMissions(){
+ let pool=[...catalog];
+ if(state.focus==='fisico')pool.sort((a,b)=>((b.stat==='forca'||b.stat==='vitalidade')?1:0)-((a.stat==='forca'||a.stat==='vitalidade')?1:0));
+ if(state.focus==='mente')pool.sort((a,b)=>(b.stat==='inteligencia'?1:0)-(a.stat==='inteligencia'?1:0));
+ if(state.focus==='autonomia')pool.sort((a,b)=>(b.stat==='autonomia'?1:0)-(a.stat==='autonomia'?1:0));
+ const count=state.minutes<=15?2:3;
+ const seed=new Date().getDate()+new Date().getMonth()+state.difficulty;
+ const chosen=[];for(let i=0;i<pool.length&&chosen.length<count;i++){chosen.push(pool[(i+seed)%pool.length])}
+ state.missions=chosen.map(m=>({...m,done:false,xp:Math.max(10,Math.round(m.xp*(1+(state.difficulty-1)*.08)))}));
+}
+function render(){
+ ensureDay();const l=levelFromXp(state.totalXp);state.level=l.lvl;
+ $('playerName').textContent=state.name||'JOGADOR 001';$('rank').textContent=`Nível ${l.lvl} · ${l.lvl>=10?'Caçador experiente':l.lvl>=5?'Caçador em evolução':'Classe não definida'}`;
+ $('xpText').textContent=`${l.remain} / ${l.need} EXP`;$('xpFill').style.width=(l.remain/l.need*100)+'%';
+ $('streak').textContent=state.streak?`Sequência registrada: ${state.streak} dia(s).`:'Cada jornada começa com o primeiro passo.';
+ const statDefs=[['forca','FORÇA','Capacidade física'],['vitalidade','VITALIDADE','Energia e recuperação'],['agilidade','AGILIDADE','Mobilidade e coordenação'],['inteligencia','INTELIGÊNCIA','Aprendizado aplicado'],['disciplina','DISCIPLINA','Consistência nas ações'],['autonomia','AUTONOMIA','Vida prática e liberdade']];
+ $('stats').innerHTML=statDefs.map(([k,n,d])=>`<div class="stat"><div class="statname">${n}</div><div class="statnum">${state.stats[k]||0}</div><div class="statdesc">${d} · pontos de evolução</div></div>`).join('');
+ $('missionCount').textContent=`${state.completed.length} concluída(s)`;
+ $('missions').innerHTML=state.missions.map(m=>`<article class="mission"><div class="mrow"><div class="eyebrow">MISSÃO DIÁRIA</div><div class="tag">${m.cat}</div></div><h3>${m.title}</h3><p>${m.desc}</p><div class="meta"><span>◷ ${m.min} min</span><span>✧ +${m.xp} EXP</span></div><button class="btn ${m.done?'secondary':''}" ${m.done?'disabled':''} onclick="completeMission('${m.id}')">${m.done?'✓ MISSÃO CONCLUÍDA':'CONCLUIR MISSÃO'}</button></article>`).join('');
+ if(!state.missions.length)$('missions').innerHTML='<div class="empty">Nenhuma missão encontrada. Gere novas missões para continuar.</div>';
+ $('history').innerHTML=state.history.length?state.history.slice(0,30).map(h=>`<div class="logitem"><div>${escapeHtml(h.title)}<small>${h.date} · ${h.stat.toUpperCase()}</small></div><div class="xp">+${h.xp} EXP</div></div>`).join(''):'<div class="empty">Suas conquistas aparecerão aqui. Complete sua primeira missão para iniciar o registro.</div>';
+ $('nameInput').value=state.name;$('timeInput').value=String(state.minutes);$('focusInput').value=state.focus;
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+window.completeMission=function(id){const m=state.missions.find(x=>x.id===id);if(!m||m.done)return;m.done=true;state.completed.push(id);state.totalXp+=m.xp;state.xp=state.totalXp;state.stats[m.stat]=(state.stats[m.stat]||0)+1;state.history.unshift({title:m.title,date:today(),stat:m.stat,xp:m.xp});const old=state.level;state.level=levelFromXp(state.totalXp).lvl;save();render();if(state.level>old){$('systemMessage').textContent='[SISTEMA] NÍVEL AUMENTADO. Você subiu para o nível '+state.level+'. A evolução continua.';toast('NÍVEL AUMENTADO!')}else toast('Missão concluída. +'+m.xp+' EXP')};
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$('screen-'+b.dataset.screen).classList.add('active')}));
+$('refreshBtn').addEventListener('click',()=>{generateMissions();save();render();toast('Novas missões geradas')});
+$('checkinBtn').addEventListener('click',()=>{const d=today();if(state.lastCheckin===d){toast('Check-in de hoje já registrado');return}const y=new Date(Date.now()-86400000).toLocaleDateString('sv-SE');state.streak=state.lastCheckin===y?state.streak+1:1;state.lastCheckin=d;state.history.unshift({title:'Check-in diário',date:d,stat:'disciplina',xp:5});state.totalXp+=5;save();render();toast('Check-in concluído. +5 EXP')});
+$('saveProfile').addEventListener('click',()=>{state.name=$('nameInput').value.trim()||'JOGADOR 001';state.minutes=Number($('timeInput').value);state.focus=$('focusInput').value;generateMissions();save();render();toast('Configuração salva')});
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='awakening-progresso.json';a.click();URL.revokeObjectURL(a.href);toast('Exportação iniciada')});
+$('resetBtn').addEventListener('click',()=>{if(confirm('Apagar todo o progresso deste dispositivo? Esta ação não pode ser desfeita.')){state=defaultState();ensureDay();save();render();toast('Sistema reiniciado')}});
+ensureDay();render();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
